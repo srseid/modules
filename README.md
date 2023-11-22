@@ -1,2 +1,2 @@
-# modules
+# object oriented game
 backup lava
