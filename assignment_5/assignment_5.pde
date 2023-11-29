@@ -35,37 +35,29 @@ void draw() {
   gameover();
 }
 void gameover() {
-  if(gameOver==true) {
-    background(0);
-    text("GAME OVER!", width/2, height/2);
-    println("press enter to start next game");
+  if (gameOver==true) {
+    println("GAME OVER!!");
   }
   //timer
+
   t= interval-int(millis()/1000);
+
   time = nf(t, 2);
   if (t==0) {
     gameOver=true;
+    interval+=10;
+    location.x = 240;
+    location.y= 340;
   }
+
   fill(255);
   text(time, 50, 30);
 }
-void keyPressed() {
-  
-
-  if(keyCode==ENTER) {
-  newGame=true;
-}
-  if (newGame==true) {
-    gameOver = false;
-    interval=10;
-   
-    //person = new Person(240, 340, 2, 2);
-  }
-  
-}
 
 
-  //if(person.display<<path.display){
-  //  gameover.display;
-  //  restart;
-  //}
+
+
+//if(person.display<<path.display){
+//  gameover.display;
+//  restart;
+//}
