@@ -19,8 +19,8 @@ class Person {
     line(location.x, location.y+10, location.x, location.y+28);
     line(location.x, location.y+15, location.x-8, location.y+20);
     line(location.x, location.y+15, location.x+8, location.y+20);
-    line(location.x, location.y+28, location.x-8, location.y+34);
-    line(location.x, location.y+28, location.x+8, location.y+34);
+    line(location.x, location.y+28, location.x-8, location.y+34); //left foot
+    line(location.x, location.y+28, location.x+8, location.y+34); //right foot
 
     if (location.y>=400) {
       location.y=400;
