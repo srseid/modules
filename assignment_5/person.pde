@@ -4,6 +4,7 @@ PVector velocity = new PVector();
 
 class Person {
 
+  //constructor
   Person(float x, float y, float velocityX, float velocityY) {
     location.x = x;
     location.y = y;
