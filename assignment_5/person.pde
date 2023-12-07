@@ -1,5 +1,7 @@
 PVector location = new PVector();
 PVector velocity = new PVector();
+
+
 class Person {
 
   Person(float x, float y, float velocityX, float velocityY) {
@@ -14,11 +16,29 @@ class Person {
     stroke(255);
     strokeWeight(3);
     ellipse(location.x, location.y, 20, 20);
-    line(location.x, location.y+10, location.x, location.y+40);
-    line(location.x, location.y+15, location.x-10, location.y+20);
-    line(location.x, location.y+15, location.x+10, location.y+20);
-    line(location.x, location.y+40, location.x-10, location.y+50);
-    line(location.x, location.y+40, location.x+10, location.y+50);
+    line(location.x, location.y+10, location.x, location.y+28);
+    line(location.x, location.y+15, location.x-8, location.y+20);
+    line(location.x, location.y+15, location.x+8, location.y+20);
+    line(location.x, location.y+28, location.x-8, location.y+34); //left foot
+    line(location.x, location.y+28, location.x+8, location.y+34); //right foot
+
+    if (location.y>=400) {
+      location.y=400;
+    }
+    if (location.y<=0) {
+      location.y=0;
+    }
+    if (location.x>=400) {
+      location.x=400;
+    }
+    if (location.x<=0) {
+      location.x=0;
+    }
+   
+   
+    //if(locationx+8 && location.y+34 <= rect(0,0,400,50)){
+    //gameover.display();
+    //}
   }
 
   void keyPressed() {
